@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #020617;
+  color: white;
+}
+
+/* Header */
+header {
+  background: #0f172a;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Main */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Robot */
+.robot {
+  position: relative;
+  width: 120px;
+  height: 220px;
+}
+
+.head, .body, .arm, .leg {
+  position: absolute;
+  background: #38bdf8;
+  border-radius: 5px;
+}
+
+/* Parts */
+.head {
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 30px;
+}
+
+.body {
+  width: 80px;
+  height: 90px;
+  top: 70px;
+  left: 20px;
+}
+
+.arm {
+  width: 20px;
+  height: 70px;
+  top: 70px;
+}
+
+.arm.left { left: 0; }
+.arm.right { right: 0; }
+
+.leg {
+  width: 25px;
+  height: 70px;
+  top: 160px;
+}
+
+.leg.left { left: 25px; }
+.leg.right { right: 25px; }
+
+/* Dance animation */
+.dance {
+  animation: move 0.5s infinite alternate;
+}
+
+@keyframes move {
+  0% { transform: rotate(-10deg) scale(1); }
+  100% { transform: rotate(10deg) scale(1.05); }
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4ade80;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #0f172a;
+}
